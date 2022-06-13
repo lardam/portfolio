@@ -10,119 +10,137 @@
 </head>
 <body>
   <header id="header">
-        <a id="home" href="index.html"><p>Dam</p></a>
-        <nav>
-          <div id="burger" class="burger">
-            <div id="line-1" class="burger-line"></div>
-            <div id="line-2" class="burger-line"></div>
-            <div id="line-3" class="burger-line"></div>
-            <div id="close-line"></div>
-          </div>
-          <div id="nav-list-container" class="nav-list-container">
-            <ul id="nav-list" class="nav-list">
-              <li><a href="#about-me" class="navlink">Sobre mí</a></li>
-              <li><a href="#projects" class="navlink">Proyectos</a></li>
-              <li><a href="#skills" class="navlink">Habilidades</a></li>
-              <li>Descargar CV</li>
-              <li id="contact-btn-lg">Contacto</li>
-            </ul>
+    <a id="home" href="index.html"><p>Dam</p></a>
+    <nav>
+      <div id="burger" class="burger">
+        <div id="line-1" class="burger-line"></div>
+        <div id="line-2" class="burger-line"></div>
+        <div id="line-3" class="burger-line"></div>
+        <div id="close-line"></div>
+      </div>
+      <div id="nav-list-container" class="nav-list-container">
+        <ul id="nav-list" class="nav-list">
+          <li class="nav-link"><a href="#about-me">Sobre mí</a></li>
+          <li class="nav-link"><a href="#projects">Proyectos</a></li>
+          <li class="nav-link"><a href="#skills">Habilidades</a></li>
+          <li class="nav-link"><a href="./resources/cvLarenas" download>Descargar CV</a></li>
+          <li>
             <div id="contact-container">
-              <p id="contact-title">Contacto</p>
               <ul id="contact-list">
                 <li><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                 <li><a href="" target="_blank"><i class="fa-solid fa-at"></i></a></li>
                 <li><a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
               </ul>
             </div>
-          </div>
-        </nav>
-      </header>
-  <main id="main">
-    <section id="about-me">
-      <div id="title-container"><h1 id="title"></h1></div>
-      <div id="img-container">
-        <div id="img-carousel">
-          <div class="about-me-img"></div>
-          <img class="about-me-img" src="./resources/codigo.png">
-          <img class="about-me-img" src="./resources/teclado.png">
-          <img class="about-me-img" src="./resources/monitor.png">
-          <img class="about-me-img" src="./resources/fono.png">
-          <img class="about-me-img" src="./resources/taza-de-cafe.png">
-          <img class="about-me-img" src="./resources/planta.png">
+          </li>
         </div>
+    </nav>
+  </header>
+<main id="main">
+<section id="about-me">
+  <div id="title-container"><h1 id="title"></h1></div>
+  <div id="img-container">
+    <div id="img-carousel">
+      <div class="about-me-img"></div>
+      <img class="about-me-img" src="./resources/codigo.png">
+      <img class="about-me-img" src="./resources/teclado.png">
+      <img class="about-me-img" src="./resources/monitor.png">
+      <img class="about-me-img" src="./resources/fono.png">
+      <img class="about-me-img" src="./resources/taza-de-cafe.png">
+      <img class="about-me-img" src="./resources/planta.png">
+    </div>
+  </div>
+  <div id="about-me-text"><p>Soy Damián, Front-End Dev en construcción de Argentina pal' mundo.<br>Acá te voy a mostrar mi progreso -hasta hoy-</p></div>
+ </section>
+<section id="projects">
+  <div id="projects-container">
+    <div id=projects-title-container><h2 id="projects-title"></h2></div>
+    <div id="projects-sm-container">
+      <div class="project" id="pr-portfolio">
+        <h3 class="project-title">Portfolio</h3>
+        <a class="project-img" href="https://lardam.github.io/portfolio"><img src="./resources/portfolio.png" alt="Portfolio preview"></a>
+        <p class="project-description">Este mismo sitio. Simple y con estilo propio, trabajado con HTML/SCSS y JavaScript.</p>
       </div>
-      <div id="about-me-text"><p>Soy Damián, Front-End Dev en construcción de Argentina pal' mundo.<br>Acá te voy a mostrar mi progreso -hasta hoy-</p></div>
-     </section>
-    <section id="projects">
-      <div id="projects-container">
-        <div id=projects-title-container><h2 id="projects-title"></h2></div>
-        <div id="projects-sm-container">
-          <div class="project" id="pr-portfolio">
-            <h3 class="project-title">Portfolio</h3>
-            <img class="project-img" src="./resources/portfolio.png" alt="Portfolio preview">
-            <p class="project-description">Este mismo sitio. Simple y con estilo propio, trabajado con HTML/SCSS y JavaScript.</p>
+      <div class="project" id="pr-store">
+        <h3 class="project-title">Prototipo Tienda</h3>
+        <img class="project-img" src="./resources/tienda.png" alt="Tienda preview">
+        <p class="project-description">Prototipo de tienda. Diseño clásico y básico, trabajado con HTML/SCSS y React.</p>
+      </div>
+      <div class="project-lg project" id="pr-calc">
+            <h3 class="project-title">Calculadora</h3>
+            <img class="project-img" src="./resources/calculadora.png" alt="Calculadora preview">
+            <p class="project-description">Simple calculadora, hecha con HTML/SCSS y JavaScript para TheOdinProject.</p>
           </div>
-          <div class="project" id="pr-store">
-            <h3 class="project-title">Prototipo Tienda</h3>
-            <img class="project-img" src="./resources/tienda.png" alt="Tienda preview">
-            <p class="project-description">Prototipo de tienda. Diseño clásico y básico, trabajado con HTML/SCSS y React.</p>
+      <div class="project-lg project" id="pr-eas">
+            <h3 class="project-title">Etch-a-Sketch</h3>
+            <img class="project-img" src="./resources/etch-a-sketch.png" alt="Etch-a-Sketch preview">
+            <p class="project-description">Una pizarra mágica, hecha con HTML/SCSS y JavaScript para TheOdinProject</p>
           </div>
-          <div id="mini-projects">
-            <div id="mini-pr-container">
-              <div class="m-project project" id="m-pr-calc">
-                <h3 class="project-title">Calculadora</h3>
-                <img class="project-img" src="./resources/calculadora.png" alt="Calculadora preview">
-                <p class="project-description">Simple calculadora, hecha con HTML/SCSS y JavaScript para TheOdinProject.</p>
-              </div>
-              <div class="m-project project" id="m-pr-eas">
-                <h3 class="project-title">Etch-a-Sketch</h3>
-                <img class="project-img" src="./resources/etch-a-sketch.png" alt="Etch-a-Sketch preview">
-                <p class="project-description">Una pizarra mágica, hecha con HTML/SCSS y JavaScript para TheOdinProject</p>
-              </div>
-              <div class="m-project project" id="m-pr-rps">
-                <h3 class="project-title">Piedra, papel o tijeras</h3>
-                <img class="project-img" src="./resources/rock-paper-scissors.png" alt="Piedra, papel o tijeras preview">
-                <p class="project-description">Para jugar versus la computadora, hecho con HTML/SCSS y JavaScript para TheOdinProject</p>
-              </div>
+      <div class="project-lg project" id="pr-rps">
+            <h3 class="project-title">Piedra, papel o tijeras</h3>
+            <img class="project-img" src="./resources/rock-paper-scissors.png" alt="Piedra, papel o tijeras preview">
+            <p class="project-description">Para jugar versus la computadora, hecho con HTML/SCSS y JavaScript para TheOdinProject</p>
+          </div>
+      <div id="mini-projects">
+        <div id="mini-pr-container">
+          <div class="m-project project" id="m-pr-calc">
+            <h3 class="project-title">Calculadora</h3>
+            <img class="project-img" src="./resources/calculadora.png" alt="Calculadora preview">
+            <p class="project-description">Simple calculadora, hecha con HTML/SCSS y JavaScript para TheOdinProject.</p>
+          </div>
+          <div class="m-project project" id="m-pr-eas">
+            <h3 class="project-title">Etch-a-Sketch</h3>
+            <img class="project-img" src="./resources/etch-a-sketch.png" alt="Etch-a-Sketch preview">
+            <p class="project-description">Una pizarra mágica, hecha con HTML/SCSS y JavaScript para TheOdinProject</p>
+          </div>
+          <div class="m-project project" id="m-pr-rps">
+            <h3 class="project-title">Piedra, papel o tijeras</h3>
+            <img class="project-img" src="./resources/rock-paper-scissors.png" alt="Piedra, papel o tijeras preview">
+            <p class="project-description">Para jugar versus la computadora, hecho con HTML/SCSS y JavaScript para TheOdinProject</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-left" id="m-pr-left"></i>
+        <i class="fa-solid fa-chevron-right" id="m-pr-right"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div id="skills-container">
+    <div id="skills-title-container"><h1 id="skills-title"></h1></div>
+  <div id="skills-icons-container">
+                <ul id="skills-icons-list">
+                    <li><i title="HTML5" class="fa-brands fa-html5"></i></li>
+                    <li><i title="CSS3" class="fa-brands fa-css3-alt"></i></li>
+                    <li><i title="JavaScript" class="fa-brands fa-js"></i></li>
+                    <li><i title="SASS" class="fa-brands fa-sass"></i></li>
+                    <li><i title="GitHub" class="fa-brands fa-github"></i></li>
+                    <li><i title="ReactJS" class="fa-brands fa-react"></i></li>
+                </ul>
             </div>
-            <i class="fa-solid fa-chevron-left" id="m-pr-left"></i>
-            <i class="fa-solid fa-chevron-right" id="m-pr-right"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="skills">
-      <div id="skills-container">
-        <div id="skills-title-container"><h1 id="skills-title"></h1></div>
-      <div id="skills-icons-container">
-                    <ul id="skills-icons-list">
-                        <li><i title="HTML5" class="fa-brands fa-html5"></i></li>
-                        <li><i title="CSS3" class="fa-brands fa-css3-alt"></i></li>
-                        <li><i title="JavaScript" class="fa-brands fa-js"></i></li>
-                        <li><i title="SASS" class="fa-brands fa-sass"></i></li>
-                        <li><i title="GitHub" class="fa-brands fa-github"></i></li>
-                        <li><i title="ReactJS" class="fa-brands fa-react"></i></li>
-                    </ul>
-                </div>
-      <div id="other-container">
-        <div id="other-skills-container" class="extra-info-container">
-          <div id="minor-skills-title-container"><h2 id="minor-skills-title"></h2></div>
-          <ul id="other-skills-list">
-            <li>Node.js + NPM</li>
-            <li>JSX</li>
-            <li>Bootstrap</li>
-          </ul>
-        </div>
-        <div id="certifications-container" class="extra-info-container">
-          <div id="certifications-title-container"><h2 id="certifications-title"></h2></div>
-          <ul id="certifications-list">
-          <li>CoderHouse: HTML + CSS</li>
-          <li>CoderHouse: JS</li>
-          <li>FCC: Responsive Web Design</li>
-        </ul>
-        </div>
-      </div>
-  </section> 
+  <div id="other-container">
+    <div id="other-skills-container" class="extra-info-container">
+      <div id="minor-skills-title-container"><h2 id="minor-skills-title"></h2></div>
+      <ul id="other-skills-list">
+        <li>Node.js + NPM</li>
+        <li>JSX</li>
+        <li>Bootstrap</li>
+      </ul>
+    </div>
+    <div id="certifications-container" class="extra-info-container">
+      <div id="certifications-title-container"><h2 id="certifications-title"></h2></div>
+      <ul id="certifications-list">
+      <li>CoderHouse: HTML + CSS</li>
+      <li>CoderHouse: JS</li>
+      <li>FCC: Responsive Web Design</li>
+    </ul>
+    </div>
+  </div>
+</section>
+  <footer id="footer">
+    <p>Atado con alambre por Damián Larenas - © <script>document.write(new Date().getFullYear())</script></p>
+  </footer>
 </main>
 </body>
 <script src="./src/app.js"></script>

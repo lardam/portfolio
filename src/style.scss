@@ -29,18 +29,19 @@ body{
   header{
     height: 4rem;
     width: 100vw;
-    background-color: $color-b;
+    padding: 0 2rem;
+    background-color: $color-d;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     z-index: 1; 
-    border-bottom: 1px solid $color-d;
+    border-bottom: 1px solid #fff;
     #home{
       font-size: 1.3rem;
-      font-weight: 700;
-      color: $color-c;
+      font-weight: 600;
+      color: #fff;
       text-decoration: none;
       z-index: 5;
     }
@@ -64,7 +65,7 @@ body{
         .burger-line{
           width: 70%;
           height: 3px;
-          background-color: $color-c;
+          background-color: #fff;
         }
         #close-line{
           display: none;
@@ -91,7 +92,7 @@ body{
           left: 2px;
           top: 45%;
           content: ' ';
-          background-color: $color-c;
+          background-color: #fff;
         }
         #close-line:before{
           transform: rotate(-135deg);
@@ -121,15 +122,15 @@ body{
           font-weight: 600;
           color: $color-c;
           list-style: none;
-          li{
+          .nav-link{
             cursor: pointer;
-            opacity: 0.8;
+            opacity: 1;
             &:hover{
               opacity: 1;
             }
             a{
               text-decoration: none;
-              color: unset;
+              color: #fff;
             }
           }
           #contact-btn-lg{
@@ -162,9 +163,9 @@ body{
             list-style: none;
             li i{
               font-size: 1.5rem;
-              color: $color-c;
-              opacity: 0.8;
               cursor: pointer;
+              color: #fff;
+              opacity: 1;
               &:hover{
                 opacity: 1;
               }
@@ -174,7 +175,7 @@ body{
       }
       .open-mobile-nav{
         display: grid;
-        grid-template-rows: 75% 20%;
+        background-color: $color-d;
       }
     }
   }
@@ -184,7 +185,7 @@ body{
       padding-top: 4rem;
       position: relative;
       #title-container{
-          height: 33%;
+          height: 30%;
           display: flex;
           align-items: center;
           justify-content: space-around;
@@ -194,8 +195,10 @@ body{
           }
       }
       #img-container{
+        height: 40%;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         #img-carousel{
           height: 10rem;
           width: 10rem;
@@ -209,12 +212,11 @@ body{
         }
       }
       #about-me-text{
-        height: 33%;
+        height: 30%;
         padding: 0 1.5rem;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         display: flex;
         align-items: center;
-        justify-content: space-around;
         text-align: center;
       }
     }
@@ -236,31 +238,38 @@ body{
           }
         }
         #projects-sm-container{
-          height: calc(100% - 4rem);
+          height: 100%;
           padding: 2rem 5%;
           display: grid;
           grid-template-rows: repeat(3, 30%);
           grid-gap: 4.5%;
           .project{
-            background-color: $color-b;
             padding: 1rem 2rem;
+            border: 1px solid $color-b;
+            border-radius: 3px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            background-color: #fff;
             .project-title{
               text-align: center;
             }
             .project-img{
-              height: 50%;
-              width: 95%;
+              height: 45%;
               background-color: #fff;
+              img{
+                height: 100%;
+              }
             }
             .project-description{
               padding: 0 2.5%;
               font-size: 0.8rem;
               text-align: center;
             }
+          }
+          .project-lg{
+            display: none;
           }
           #mini-projects{
             overflow: hidden;
@@ -278,6 +287,7 @@ body{
               position: absolute;
               top: calc(50% - 0.8rem);
               color: $color-d;
+              cursor: pointer;
             }
             #m-pr-left{
               left: 1rem;
@@ -291,6 +301,7 @@ body{
     }
     #skills{
       height: 120vh;
+      margin-bottom: 2rem;
       padding-top: 4rem;
       background-color: $color-d;
       #skills-container{
@@ -306,8 +317,8 @@ body{
           border-bottom: 3px solid #000;
           }
         #skills-icons-container{
-          margin-top: 2rem;
           height: 40%;
+
               #skills-icons-list{
                 height: 100%;
                 display: grid;
@@ -343,8 +354,7 @@ body{
               }
           }
         #other-container{
-          height: 40%;
-          margin-top: 2rem;
+          height: 50%;
           display: grid;
           grid-template-rows: 50% 50%;
           .extra-info-container{
@@ -369,26 +379,26 @@ body{
         }
       }
     }
+    #footer{
+      height: 6rem;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: $color-d;
+      color: #fff;
+    }
   }
 }
 
-@media screen and (min-width: 420px) and (max-width: 768px) {
+@media screen and (min-width: 425px) {
   body{
     #main{
-      #about-me #about-me-text{
-        padding: 0 2rem;
-      }
       #projects #projects-container #projects-sm-container{
         padding: 2rem 10%;
         justify-items: center;
-        .project{
-          max-width: 450px;
-        .project-img{
-            width: 80%;
-            max-width: 225px;
-          }
-        }
-        #mini-projects{
+        .project, #mini-projects{
           max-width: 450px;
         }
       }
@@ -399,15 +409,17 @@ body{
       }
     }
   }
+  
 }
 
-@media screen and (min-width: 568px) and (max-width: 768px) {
+@media screen and (min-width: 620px) {
   body{
     #main #skills #skills-container #other-container{
+      height: 33%;
       grid-template-rows: unset;
       grid-template-columns: 50% 50%;
-      .extra-info-container ul{
-        height: 60%;
+      .extra-info-container{
+        justify-content: space-between;
       }
     }
   }
@@ -438,6 +450,20 @@ body{
             display: none;
           }
         }
+      }
+    }
+    #main{
+      #projects{
+        #projects-container{
+          #projects-sm-container{
+            .project-lg{
+              display: block;
+            }
+          }
+        }
+      }
+      #mini-projects{
+        display: none;
       }
     }
   }

@@ -2,7 +2,7 @@
 
 const burger = document.getElementById('burger')
 const nav = document.getElementById('nav-list-container')
-const navlinks = document.querySelectorAll('.navlink')
+const navlinks = document.querySelectorAll('.nav-link')
 
 function toggleNav(){
     nav.classList.toggle('open-mobile-nav')
