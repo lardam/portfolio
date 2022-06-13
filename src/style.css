@@ -172,6 +172,7 @@ body {
       padding: 0 1.5rem;
       font-size: 1.3rem;
       display: flex;
+      justify-content: space-around;
       align-items: center;
       text-align: center; }
   body #main #projects {
@@ -218,6 +219,7 @@ body {
         body #main #projects #projects-container #projects-sm-container .project-lg {
           display: none; }
         body #main #projects #projects-container #projects-sm-container #mini-projects {
+          width: 100%;
           overflow: hidden;
           position: relative; }
           body #main #projects #projects-container #projects-sm-container #mini-projects #mini-pr-container {
@@ -316,33 +318,59 @@ body {
     padding: 0 2rem; } }
 
 @media screen and (min-width: 620px) {
+  body #main #skills #skills-container #skills-icons-container {
+    height: 45%;
+    margin-top: 1rem; }
   body #main #skills #skills-container #other-container {
-    height: 33%;
+    height: 35%;
+    margin-top: 2rem;
     grid-template-rows: unset;
     grid-template-columns: 50% 50%; }
-    body #main #skills #skills-container #other-container .extra-info-container {
-      justify-content: space-between; } }
+  body #main #skills #skills-container .extra-info-container {
+    justify-content: space-between; } }
+
+@media screen and (min-width: 768px) {
+  body #main #skills #skills-container #skills-icons-container {
+    padding: 0 10%; }
+  body #main #skills #skills-container #other-container {
+    padding: 0 15%; } }
 
 @media screen and (min-width: 1024px) {
   body header {
-    justify-content: space-around; }
+    padding: 0 5%;
+    justify-content: space-between; }
     body header nav {
-      width: 70%;
+      width: 50%;
       background-color: #fff; }
       body header nav .burger {
         display: none; }
       body header nav .nav-list-container {
         display: flex;
-        position: unset; }
+        position: unset;
+        background-color: #7A6178; }
         body header nav .nav-list-container .nav-list {
-          width: 80%;
+          width: 100%;
           flex-direction: row;
+          justify-content: space-between;
           align-items: center; }
-          body header nav .nav-list-container .nav-list #contact-btn-lg {
-            display: block; }
+          body header nav .nav-list-container .nav-list #contact-list-container {
+            display: none; }
         body header nav .nav-list-container #contact-container {
           display: none; }
-  body #main #projects #projects-container #projects-sm-container .project-lg {
-    display: block; }
+  body #main #about-me #title-container #title {
+    font-size: 4rem; }
+  body #main #about-me #img-container #img-carousel {
+    height: 15rem;
+    width: 15rem; }
+  body #main #about-me #about-me-text {
+    font-size: 2rem; }
+  body #main #projects #projects-container #projects-sm-container {
+    padding: 2rem 0;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: repeat(3, 30%);
+    grid-gap: 4.5% 0;
+    justify-content: space-evenly; }
+    body #main #projects #projects-container #projects-sm-container .project-lg {
+      display: block; }
   body #main #mini-projects {
     display: none; } }

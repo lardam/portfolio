@@ -216,6 +216,7 @@ body{
         padding: 0 1.5rem;
         font-size: 1.3rem;
         display: flex;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
       }
@@ -272,6 +273,7 @@ body{
             display: none;
           }
           #mini-projects{
+            width: 100%;
             overflow: hidden;
             position: relative;
             #mini-pr-container{
@@ -414,12 +416,34 @@ body{
 
 @media screen and (min-width: 620px) {
   body{
-    #main #skills #skills-container #other-container{
-      height: 33%;
-      grid-template-rows: unset;
-      grid-template-columns: 50% 50%;
+    #main #skills #skills-container{
+      #skills-icons-container{
+        height: 45%;
+        margin-top: 1rem;
+      }
+      #other-container{
+        height: 35%;
+        margin-top: 2rem;
+        grid-template-rows: unset;
+        grid-template-columns: 50% 50%;
+      }
       .extra-info-container{
         justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  body{
+    #main{
+      #skills #skills-container{
+        #skills-icons-container{
+          padding: 0 10%;
+        }
+        #other-container{
+          padding: 0 15%;
+        }
       }
     }
   }
@@ -428,9 +452,10 @@ body{
 @media screen and (min-width: 1024px){
   body{
     header{
-      justify-content: space-around;
+      padding: 0 5%;
+      justify-content: space-between;
       nav{
-        width: 70%;
+        width: 50%;
         background-color: #fff;
         .burger{
           display: none;
@@ -438,12 +463,14 @@ body{
         .nav-list-container{
           display: flex;
           position: unset;
+          background-color: $color-d;
           .nav-list{
-            width: 80%;
+            width: 100%;
             flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            #contact-btn-lg{
-              display: block;
+            #contact-list-container{
+              display: none;
             }
           }
           #contact-container{
@@ -453,9 +480,26 @@ body{
       }
     }
     #main{
+      #about-me{
+        #title-container #title{
+          font-size: 4rem;
+        }
+        #img-container #img-carousel{
+          height: 15rem;
+          width: 15rem;
+        }
+        #about-me-text{
+          font-size: 2rem;
+        }
+      }
       #projects{
         #projects-container{
           #projects-sm-container{
+            padding: 2rem 0;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: repeat(3, 30%);
+            grid-gap: 4.5% 0;
+            justify-content: space-evenly;
             .project-lg{
               display: block;
             }
