@@ -500,14 +500,50 @@ body{
             grid-template-rows: repeat(3, 30%);
             grid-gap: 4.5% 0;
             justify-content: space-evenly;
+            .project{
+              .project-title{
+                font-size: 1.5rem;
+              }
+              .project-img{
+                height: 50%;
+              }
+              .project-description{
+                font-size: 1rem;
+              }
+            }
             .project-lg{
-              display: block;
+              display: flex;
+            }
+            #mini-projects{
+              display: none;
             }
           }
         }
       }
-      #mini-projects{
-        display: none;
+      #skills{
+        #skills-container{
+          #skills-icons-container{
+            padding: 0 15%;
+            #skills-icons-list li i{
+              font-size: 8rem;
+            }
+          }
+          #other-container{
+            height: 35%;
+            margin-top: 5rem;
+            .extra-info-container{
+              div h2{
+                font-size: 1.8rem;
+              }
+              ul li {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      #footer p{
+        font-size: 1.2rem;
       }
     }
   }

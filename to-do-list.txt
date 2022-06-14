@@ -1,0 +1,6 @@
+Animation on nav items - lg-screen
+Create contact floating btn on lg-screen
+Check vertical carousel imgs to match heights
+Change font-size of headers
+Change section titles from div to header element
+Set font-sizes to a default on each screen

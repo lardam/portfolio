@@ -370,7 +370,26 @@ body {
     grid-template-rows: repeat(3, 30%);
     grid-gap: 4.5% 0;
     justify-content: space-evenly; }
+    body #main #projects #projects-container #projects-sm-container .project .project-title {
+      font-size: 1.5rem; }
+    body #main #projects #projects-container #projects-sm-container .project .project-img {
+      height: 50%; }
+    body #main #projects #projects-container #projects-sm-container .project .project-description {
+      font-size: 1rem; }
     body #main #projects #projects-container #projects-sm-container .project-lg {
-      display: block; }
-  body #main #mini-projects {
-    display: none; } }
+      display: flex; }
+    body #main #projects #projects-container #projects-sm-container #mini-projects {
+      display: none; }
+  body #main #skills #skills-container #skills-icons-container {
+    padding: 0 15%; }
+    body #main #skills #skills-container #skills-icons-container #skills-icons-list li i {
+      font-size: 8rem; }
+  body #main #skills #skills-container #other-container {
+    height: 35%;
+    margin-top: 5rem; }
+    body #main #skills #skills-container #other-container .extra-info-container div h2 {
+      font-size: 1.8rem; }
+    body #main #skills #skills-container #other-container .extra-info-container ul li {
+      font-size: 1.5rem; }
+  body #main #footer p {
+    font-size: 1.2rem; } }
