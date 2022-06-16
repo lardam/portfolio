@@ -392,6 +392,30 @@ body{
       color: #fff;
     }
   }
+  #contact-bubble{
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid #fff;
+    border-radius: 2rem 0.4rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: animation 0.5s ease;
+    animation: none;
+    p{
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    #bubble-contact-list{
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 425px) {
@@ -546,5 +570,30 @@ body{
         font-size: 1.2rem;
       }
     }
+    #contact-bubble{
+      display: flex;
+    }
   }
+}
+
+@keyframes expand-bubble{
+  0%{
+    height: 4rem;
+    background-color: #000;
+  }
+  100%{
+    height: 20rem;
+    background-color: $color-d;
+  }
+}
+
+@keyframes burst-bubble{
+  0%{
+    height: 20rem;
+    background-color: $color-d;
+  }
+  100%{
+    height: 4rem;
+    background-color: #000;
+  } 
 }

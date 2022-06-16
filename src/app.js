@@ -171,3 +171,23 @@ function triggerAutoslide(){
 }
 
 triggerAutoslide()
+
+//Contact-bubble
+
+const bubble = document.getElementById('contact-bubble')
+const contactContainer = document.getElementById('bubble-contact-list')
+let isBubbleOpen = false
+
+bubble.addEventListener('click', () => {
+  if(isBubbleOpen === false){
+    isBubbleOpen = true
+    bubble.style.animation = 'expand-bubble 1s'
+    bubble.style.height = '20rem'
+    bubble.style.backgroundColor = '#7A6178'
+  } else if(isBubbleOpen === true){
+    isBubbleOpen = false
+    bubble.style.animation = 'burst-bubble 1.5s'
+    bubble.style.height = '4rem'
+    bubble.style.backgroundColor = '#000'
+  }
+})
