@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
 
-$color-a: #FA7AED;
+$color-a: #473946;
 $color-b: #FBC6F5;
 $color-c: #7A3C74;
 $color-d: #7A6178;
@@ -22,11 +22,11 @@ body{
     box-shadow: inset 0 0 5px $color-d;
   }
   &::-webkit-scrollbar-thumb {
-  background-color: $color-d;
+  background-color: $color-a;
   opacity: 0.4;
-  border-radius: 4px;
+  border-radius: 2px;
 }
-  header{
+  #header{
     height: 4rem;
     width: 100vw;
     padding: 0 2rem;
@@ -36,7 +36,7 @@ body{
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 1; 
+    z-index: 1;
     border-bottom: 1px solid #fff;
     #home{
       font-size: 1.3rem;
@@ -55,62 +55,26 @@ body{
       .burger{
         height: 2rem;
         width: 2rem;
-        border-radius: 15%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        padding: 0.25rem;
         cursor: pointer;
         z-index: 3;
         .burger-line{
-          width: 70%;
-          height: 3px;
+          width: 1.5rem;
+          height: 0.2rem;
+          margin-bottom: 0.45rem;
           background-color: #fff;
         }
-        #close-line{
-          display: none;
-        }
       }
-      .open-mobile-burger{
-        position: relative;
-        .burger-line{
-          display: none;
-        }
-        #close-line{
-          height: 2rem;
-          width: 2rem;
-          display: block;
-          opacity: 0.5;
-          &:hover{
-            opacity: 1;
-          }
-        }
-        #close-line:before, #close-line:after {
-          height: 3px;
-          width: 90%;
-          position: absolute;
-          left: 2px;
-          top: 45%;
-          content: ' ';
-          background-color: #fff;
-        }
-        #close-line:before{
-          transform: rotate(-135deg);
-        }
-        #close-line:after{
-          transform: rotate(135deg)
-        }
-      }
-      .nav-list-container{
+      #nav-list-container{
         height: 100%;
         width: 100%;
         display: none;
         justify-content: space-around;
         align-items: center;
+        background-color: $color-d;
         position: fixed;
         bottom: 0;
         left: 0;
-        background-color: $color-b;
         z-index: 2;
         .nav-list{
           height: 95%;
@@ -175,13 +139,12 @@ body{
       }
       .open-mobile-nav{
         display: grid;
-        background-color: $color-d;
       }
     }
   }
   #main{
     #about-me{
-      height: 90vh;
+      height: calc(100vh - 4rem);
       padding-top: 4rem;
       position: relative;
       #title-container{
@@ -195,7 +158,7 @@ body{
           }
       }
       #img-container{
-        height: 40%;
+        height: 33%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -212,8 +175,8 @@ body{
         }
       }
       #about-me-text{
-        height: 30%;
-        padding: 0 1.5rem;
+        height: 40%;
+        padding: 0 2rem;
         font-size: 1.3rem;
         display: flex;
         justify-content: space-around;
@@ -258,9 +221,11 @@ body{
             }
             .project-img{
               height: 45%;
+              width: 100%;
               background-color: #fff;
               img{
                 height: 100%;
+                width: 100%;
               }
             }
             .project-description{
@@ -320,7 +285,7 @@ body{
           }
         #skills-icons-container{
           height: 40%;
-
+          padding: 0 2rem;
               #skills-icons-list{
                 height: 100%;
                 display: grid;
@@ -332,7 +297,7 @@ body{
                     display: flex;
                     justify-content: center;
                     i{
-                        font-size: 4.2rem;
+                        font-size: 3.6rem;
                     }
                     .fa-html5:hover{
                         color: #e34c26;
@@ -371,7 +336,7 @@ body{
               }
             }
             ul{
-              padding: 0 1.5rem;
+              padding: 0 2rem;
               margin-top: 1rem;
               li{
                 margin-bottom: 0.3rem;
@@ -405,6 +370,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
     transition: animation 0.5s ease;
     animation: none;
     p{
@@ -413,7 +379,25 @@ body{
       color: #fff;
     }
     #bubble-contact-list{
+      height: 100%;
+      padding: 2rem 0;
       display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: display 1s ease-out;
+      li a{
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  body{
+    #main #about-me #img-container #img-carousel{
+      height: 8rem;
+      width: 8rem;
     }
   }
 }
@@ -428,11 +412,6 @@ body{
           max-width: 450px;
         }
       }
-      #skills #skills-container{
-        #skills-icons-container, #other-container{
-          padding: 0 2rem;
-        }
-      }
     }
   }
   
@@ -440,19 +419,30 @@ body{
 
 @media screen and (min-width: 620px) {
   body{
-    #main #skills #skills-container{
-      #skills-icons-container{
-        height: 45%;
-        margin-top: 1rem;
+    #main{
+      #projects #projects-container{
+        #projects-sm-container .project .project-img{
+          width: 85%;
+        }
       }
-      #other-container{
-        height: 35%;
-        margin-top: 2rem;
-        grid-template-rows: unset;
-        grid-template-columns: 50% 50%;
-      }
-      .extra-info-container{
-        justify-content: space-between;
+      #skills #skills-container{
+        #skills-icons-container{
+          height: 45%;
+          margin-top: 1rem;
+          #skills-icons-list li i{
+            font-size: 6rem;
+          }
+        }
+        #other-container{
+          height: 35%;
+          margin-top: 2rem;
+          grid-template-rows: unset;
+          grid-template-columns: 50% 50%;
+          .extra-info-container ul{
+            height: 50%;
+            display: grid;
+          }
+        }
       }
     }
   }
@@ -466,7 +456,7 @@ body{
           padding: 0 10%;
         }
         #other-container{
-          padding: 0 15%;
+          padding: 0 2rem;
         }
       }
     }
@@ -475,24 +465,43 @@ body{
 
 @media screen and (min-width: 1024px){
   body{
-    header{
+    #header{
       padding: 0 5%;
       justify-content: space-between;
       nav{
-        width: 50%;
+        height: 100%;
+        width: 65%;
         background-color: #fff;
         .burger{
           display: none;
         }
-        .nav-list-container{
+        #nav-list-container{
           display: flex;
           position: unset;
           background-color: $color-d;
           .nav-list{
+            height: 100%;
             width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
             align-items: center;
+            .nav-link{
+              height: 100%;
+              width: 100%;
+              transition-property: background-color, color;
+              transition-duration: 0.2s;
+              transition-timing-function: ease-in-out;
+              &:hover{
+                background-color: $color-a;
+              }
+              a{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
             #contact-list-container{
               display: none;
             }
@@ -525,11 +534,13 @@ body{
             grid-gap: 4.5% 0;
             justify-content: space-evenly;
             .project{
+              max-width: 600px;
               .project-title{
                 font-size: 1.5rem;
               }
               .project-img{
                 height: 50%;
+                width: 75%;
               }
               .project-description{
                 font-size: 1rem;
@@ -554,13 +565,17 @@ body{
           }
           #other-container{
             height: 35%;
-            margin-top: 5rem;
+            margin-top: 2rem;
             .extra-info-container{
+              padding: 0 2rem;
               div h2{
                 font-size: 1.8rem;
               }
-              ul li {
-                font-size: 1.5rem;
+              ul{
+                height: 55%;
+                 li {
+                  font-size: 1.5rem;
+                }
               }
             }
           }
@@ -576,6 +591,28 @@ body{
   }
 }
 
+@media screen and (min-width: 1280px) {
+  body{
+    #header nav{
+      width: 55%;
+    }
+    #main{
+      #projects #projects-container #projects-title-container{
+        height: 5rem;
+        h2{
+          font-size: 2.5rem;
+        }
+      }
+      #skills #skills-container #skills-title-container{
+        height: 5rem;
+        h2{
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
 @keyframes expand-bubble{
   0%{
     height: 4rem;
@@ -583,17 +620,104 @@ body{
   }
   100%{
     height: 20rem;
-    background-color: $color-d;
+    background-color: $color-a;
   }
 }
 
 @keyframes burst-bubble{
   0%{
     height: 20rem;
-    background-color: $color-d;
+    background-color: $color-a;
   }
   100%{
     height: 4rem;
     background-color: #000;
   } 
+}
+
+@keyframes line-1{
+  0%{
+    transform: translateY(0px)
+  }
+  50%{
+    transform: translateY(0.65rem)
+  }
+  100%{
+    transform: translateY(0.65rem) rotate(-45deg)
+  }
+}
+
+@keyframes line-2{
+  0%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes line-3{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-0.65rem);
+  }
+  100%{
+    transform: translateY(-0.65rem) rotate(45deg);
+  }
+}
+
+@keyframes close-line-1{
+  0%{
+    transform: translateY(0.65rem) rotate(-45deg)
+  }
+  50%{
+    transform: translateY(0.65rem) rotate(0deg)
+  }
+  100%{
+    transform: translateY(0px)
+  }
+}
+
+@keyframes close-line-2{
+  0%, 99%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes close-line-3{
+  0%{
+    transform: translateY(-0.65rem) rotate(45deg)
+  }
+  50%{
+    transform: translateY(-0.65rem) rotate(0deg)
+  }
+  100%{
+    transform: translateY(0px)
+  }
+}
+
+@keyframes m-nav-open{
+  0%{
+    transform: translateX(-100vw);
+  }
+  100%{
+    transform: translateX(0vh);
+  }
+}
+
+@keyframes m-nav-close{
+  0%{
+    transform: translateX(0vw);
+  }
+  100%{
+    transform: translateX(-100vw);
+  }
 }

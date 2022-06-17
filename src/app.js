@@ -3,16 +3,37 @@
 const burger = document.getElementById('burger')
 const nav = document.getElementById('nav-list-container')
 const navlinks = document.querySelectorAll('.nav-link')
+const line1 = document.getElementById('line-1')
+const line2 = document.getElementById('line-2')
+const line3 = document.getElementById('line-3')
+
+let navOpen = false
 
 function toggleNav(){
-    nav.classList.toggle('open-mobile-nav')
-    burger.classList.toggle('open-mobile-burger')
+  if(navOpen === false){
+    line1.style.animation = 'line-1 1s forwards'
+    line2.style.animation = 'line-2 0.5s forwards'
+    line3.style.animation = 'line-3 1s forwards'
+    nav.style.animation = 'm-nav-open 0.75s forwards'
+    nav.style.display = 'grid'
+    document.body.style.overflow = 'hidden'
+    navOpen = true
+  } else {
+    line1.style.animation = 'close-line-1 1s forwards'
+    line2.style.animation = 'close-line-2 0.5s forwards'
+    line3.style.animation = 'close-line-3 1s forwards'
+    nav.style.animation = 'm-nav-close 0.75s forwards'
+    document.body.style.overflow = 'visible'
+    navOpen = false
+  }
 }
 
 burger.addEventListener('click', toggleNav)
-navlinks.forEach(item => {
-    item.addEventListener('click', toggleNav)
-})
+if(document.body.clientWidth < 1024){
+  navlinks.forEach(item => {
+      item.addEventListener('click', toggleNav)
+  })
+}
 
 //Title animations
 
@@ -175,6 +196,7 @@ triggerAutoslide()
 //Contact-bubble
 
 const bubble = document.getElementById('contact-bubble')
+const bubbleLogo = document.getElementById('contact-bubble-logo')
 const contactContainer = document.getElementById('bubble-contact-list')
 let isBubbleOpen = false
 
@@ -183,11 +205,15 @@ bubble.addEventListener('click', () => {
     isBubbleOpen = true
     bubble.style.animation = 'expand-bubble 1s'
     bubble.style.height = '20rem'
-    bubble.style.backgroundColor = '#7A6178'
+    bubble.style.backgroundColor = '#473946'
+    contactContainer.style.display = 'flex'
+    bubbleLogo.style.display = 'none'
   } else if(isBubbleOpen === true){
     isBubbleOpen = false
     bubble.style.animation = 'burst-bubble 1.5s'
     bubble.style.height = '4rem'
     bubble.style.backgroundColor = '#000'
+    contactContainer.style.display = 'none'
+    bubbleLogo.style.display = 'block'
   }
 })
