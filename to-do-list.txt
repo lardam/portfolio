@@ -1,6 +1,0 @@
-Revisit contact btn on lg (size and position)
-Set font-sizes and margins/paddings to a default on each screen
-Add a ReadMe
-Resize all imgs & pdf
-Add resume
-2nd stage => Add React (not scraping the entire project while doing it)
